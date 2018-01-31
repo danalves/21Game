@@ -1,7 +1,9 @@
 package com.daniloalvesvieira.a21game
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
@@ -23,6 +25,15 @@ class SplashActivity : AppCompatActivity() {
 
         ivLogo.clearAnimation()
         ivLogo.startAnimation(animacao)
+
+        Handler().postDelayed({
+
+            val i = Intent(this@SplashActivity, MainActivity::class.java)
+            startActivity(i)
+
+            this@SplashActivity.finish()
+
+        }, 3000)
 
     }
 }
