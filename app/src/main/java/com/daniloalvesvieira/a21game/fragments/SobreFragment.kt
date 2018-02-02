@@ -16,10 +16,13 @@ import com.daniloalvesvieira.a21game.R
 class SobreFragment : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.fragment_sobre, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+
+        val view = inflater!!.inflate(R.layout.fragment_sobre, container, false)
+
+        return view
+
     }
 
 }// Required empty public constructor
